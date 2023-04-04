@@ -1,5 +1,89 @@
 # Changelog
 
+## [0.2.0](https://github.com/runlevel-six/magnum-cluster-api/compare/v0.4.0...v0.2.0) (2023-04-04)
+
+
+### Features
+
+* add auto healing ([402b23b](https://github.com/runlevel-six/magnum-cluster-api/commit/402b23b1999bc7388a58cc20e0e903656e663bec))
+* add cluster-autoscaler ([cf05ce5](https://github.com/runlevel-six/magnum-cluster-api/commit/cf05ce5f463b0f32794ca7047b46eb48796486f3))
+* add image builds ([2d5248b](https://github.com/runlevel-six/magnum-cluster-api/commit/2d5248b8153bf4dd32a51436109d30c3a2bf6922))
+* add imageRepository for container images ([ccd2f6a](https://github.com/runlevel-six/magnum-cluster-api/commit/ccd2f6a5042f0ec1807bbf8534d32abff2286dfc))
+* add magnum certs ([19cccb6](https://github.com/runlevel-six/magnum-cluster-api/commit/19cccb62c7a37ea771fb54548a99070258f6f85c))
+* add tool to load image repository ([56c7ca9](https://github.com/runlevel-six/magnum-cluster-api/commit/56c7ca99b40a8ef30172f1f71bd8046ed34b9845))
+* added cluster resize ([fa1e300](https://github.com/runlevel-six/magnum-cluster-api/commit/fa1e3008952813a9129db4fa69e55dde553a9cee))
+* added csi support ([c9a2374](https://github.com/runlevel-six/magnum-cluster-api/commit/c9a2374b7337bf8b68bf9ec4fe94584eb330dab9))
+* added ng + create_complete ([b805ad5](https://github.com/runlevel-six/magnum-cluster-api/commit/b805ad53904df04d7f4c95a23b8092b367ef1e11))
+* allow using `container_infra_prefix` ([5676b70](https://github.com/runlevel-six/magnum-cluster-api/commit/5676b70cf5ad9614c8332ba5587b0075a90ee9f8)), closes [#7](https://github.com/runlevel-six/magnum-cluster-api/issues/7)
+* Eliminate flux dependency for cluster autoscaler ([3276d9a](https://github.com/runlevel-six/magnum-cluster-api/commit/3276d9ace559bfc585c211292f584a8cfdef8a08))
+* refactor to clusterclass ([a021300](https://github.com/runlevel-six/magnum-cluster-api/commit/a0213005630e9edbc23c5c7c168ead062c92c926))
+* Use crane for image loader instead of skopeo ([8567f90](https://github.com/runlevel-six/magnum-cluster-api/commit/8567f90ad2affacb037e4326e6314106299fad24))
+* use shorter cluster names ([7b58739](https://github.com/runlevel-six/magnum-cluster-api/commit/7b58739c5262f6b5f28533a722ac8ec10ebf6c6a))
+
+
+### Bug Fixes
+
+* Add clusterctl installation in hack script ([66f36be](https://github.com/runlevel-six/magnum-cluster-api/commit/66f36bef91c46e1141e841dcb3a3c579e5334d30))
+* add containerd settings to workers ([ff708dd](https://github.com/runlevel-six/magnum-cluster-api/commit/ff708dd6e110a8ef8fb2d40348dd6dad35e057ae))
+* add context to openstackmachinetemplate ([6ff86b1](https://github.com/runlevel-six/magnum-cluster-api/commit/6ff86b1fcd5ddd621c9f771fefce2a861eb65768))
+* addd 1.26.2 images ([119b2c6](https://github.com/runlevel-six/magnum-cluster-api/commit/119b2c6fed91dc4ad82878007ed84f3bc77df6ad))
+* added flux + node labels ([5f04d4e](https://github.com/runlevel-six/magnum-cluster-api/commit/5f04d4ed8b00ba0d45cc59edd678bdf72679b00b))
+* added update_cluster_status ([faa153b](https://github.com/runlevel-six/magnum-cluster-api/commit/faa153b17a5467436d9fa2fb76744bfc7a642a76))
+* allow cluster deletion ([7dc615f](https://github.com/runlevel-six/magnum-cluster-api/commit/7dc615f1725b6a5235c95a173adab2253dc8927f))
+* allow for mirroring to insecure registry ([3d9e364](https://github.com/runlevel-six/magnum-cluster-api/commit/3d9e3645360f0f098499d5437fccdd0adab418e8))
+* allow for optional ssh key ([c2ed0af](https://github.com/runlevel-six/magnum-cluster-api/commit/c2ed0af9a773c75ada9db978088aab8818c2593a))
+* allow glance to use 10G images ([f222cb1](https://github.com/runlevel-six/magnum-cluster-api/commit/f222cb121b2b81660cdc174707d40c7882fc050a))
+* change "fixed_subnet_cidr" default value ([387fd99](https://github.com/runlevel-six/magnum-cluster-api/commit/387fd995fa4d8fac95b07bc285843349a58dca6d))
+* clean-up cluster on failures ([b2f0d9e](https://github.com/runlevel-six/magnum-cluster-api/commit/b2f0d9eb0df0ccdb28d0431005b77b4c6a806634))
+* cluster creation ([62b89f0](https://github.com/runlevel-six/magnum-cluster-api/commit/62b89f0561d1ab0d14086a85181aabbed71380ac))
+* CREATE_COMPLETE state ([898c818](https://github.com/runlevel-six/magnum-cluster-api/commit/898c818f354394d5ff898c2f911fa0f88b6771f1))
+* disable profiling ([d18936e](https://github.com/runlevel-six/magnum-cluster-api/commit/d18936e9ae76c996c6b4ff8ecbadcf666da572b0)), closes [#30](https://github.com/runlevel-six/magnum-cluster-api/issues/30) [#35](https://github.com/runlevel-six/magnum-cluster-api/issues/35) [#36](https://github.com/runlevel-six/magnum-cluster-api/issues/36)
+* enable ssl access ([7251c8a](https://github.com/runlevel-six/magnum-cluster-api/commit/7251c8a240a90dcc1dac3abd28450aca591a3684))
+* first pass at upgrades ([28ce8b0](https://github.com/runlevel-six/magnum-cluster-api/commit/28ce8b0fddc2ea4447dbedc7db1df9763a823794))
+* Fix tls-insecure of ccm configuration ([5c9ad68](https://github.com/runlevel-six/magnum-cluster-api/commit/5c9ad68e4aa7ec9ba087bf4330ef9f805a15250e))
+* image builds ([434f57d](https://github.com/runlevel-six/magnum-cluster-api/commit/434f57da1cd5f7e2a9e29c770acdde57678b0fd7))
+* incorrect print command ([a555440](https://github.com/runlevel-six/magnum-cluster-api/commit/a5554401fbd2844b5b09cd74d3491c856a9ddd2b))
+* move mhc to clusterclass ([c43ae93](https://github.com/runlevel-six/magnum-cluster-api/commit/c43ae930db7d7e13cedfd8dd80b1ede0fd0dc4a4))
+* name replacement for new repo ([0eaeeba](https://github.com/runlevel-six/magnum-cluster-api/commit/0eaeeba06bf3161260cb139a5da45a4755dcb3f0))
+* only add cluster uuid to labels ([76099d4](https://github.com/runlevel-six/magnum-cluster-api/commit/76099d44d7c069a07a16e696fde8bec2076cb50d))
+* pre-delete lbs ([513d0ff](https://github.com/runlevel-six/magnum-cluster-api/commit/513d0ff5118f33ab025e512001f71baf3e1675c9)), closes [#6](https://github.com/runlevel-six/magnum-cluster-api/issues/6)
+* reconcile ng status ([1221e94](https://github.com/runlevel-six/magnum-cluster-api/commit/1221e94e71cc88fa70839004c705af37e80ae99f))
+* relax pykube-ng requirement ([10be62a](https://github.com/runlevel-six/magnum-cluster-api/commit/10be62a3786312845cd6959db4a3e00eb4073da4))
+* remove completed todo ([0d4bf03](https://github.com/runlevel-six/magnum-cluster-api/commit/0d4bf034195a72276a17a05853bef85b37a52a00))
+* replace the repository name ([bda20a2](https://github.com/runlevel-six/magnum-cluster-api/commit/bda20a23d1845f022091029e0ed10598e07c1a94))
+* resolve resize_cluster ([7efa4f9](https://github.com/runlevel-six/magnum-cluster-api/commit/7efa4f92cbe2b1b73cbe50417113b9fb0b108ae5))
+* respect verify_ca and openstack_ca ([107cc2f](https://github.com/runlevel-six/magnum-cluster-api/commit/107cc2f302ddf41dfa4080cd6034a93639184f59))
+* solve black conflict ([e17ca40](https://github.com/runlevel-six/magnum-cluster-api/commit/e17ca4088f1abd4c5ee6b7ee481f2117fadf5057))
+* solve cinder-csi usage ([8e9157b](https://github.com/runlevel-six/magnum-cluster-api/commit/8e9157b8974a02ed92cf41cd36d4014241f7083c))
+* stop docker from tinkering ([6fdf1d2](https://github.com/runlevel-six/magnum-cluster-api/commit/6fdf1d2312d66f7e087c74ea74b9ad0be3d874cc))
+* support py3.6+ ([4e1e0b5](https://github.com/runlevel-six/magnum-cluster-api/commit/4e1e0b58c264632a1af7ae198c1d1b768330f38f))
+* update repo for initContainers ([f66bb4b](https://github.com/runlevel-six/magnum-cluster-api/commit/f66bb4b450736ef38656a1091c4a794d0b7f560f))
+* upgrades ([bda670d](https://github.com/runlevel-six/magnum-cluster-api/commit/bda670d25ae78f1d1e3e3afafd17ccaaebc959cf))
+* use 20.04 by default ([0af2de3](https://github.com/runlevel-six/magnum-cluster-api/commit/0af2de3c5a4ce4600bcc28be944edef19a887dfd))
+* use correct sandbox_image ([80d74d2](https://github.com/runlevel-six/magnum-cluster-api/commit/80d74d26d5d341c0042a794a2f5ab7151952442c))
+* use dynamic `ClusterClass` version ([d7fbbf0](https://github.com/runlevel-six/magnum-cluster-api/commit/d7fbbf0665178028a79d2f184adcf1f55e68dcd4)), closes [#16](https://github.com/runlevel-six/magnum-cluster-api/issues/16)
+* use endpoint_type for nova ([688d844](https://github.com/runlevel-six/magnum-cluster-api/commit/688d84408efcebd0dfcde6648b2db8c5a7cce1c9))
+* use getpass.getuser ([67e1ec5](https://github.com/runlevel-six/magnum-cluster-api/commit/67e1ec5b70f5b2ebbcb5b773b6a09cb249cfd0f9))
+* use new registry + 1.26.2 images ([b6c814f](https://github.com/runlevel-six/magnum-cluster-api/commit/b6c814f503b939ae48ed97a8b86f003f7b9346e1))
+* use nova_client interface ([5dc34f3](https://github.com/runlevel-six/magnum-cluster-api/commit/5dc34f3e28c7e9246c6b35eebb232cddeda64a5e))
+* use operating_system ([062e7f3](https://github.com/runlevel-six/magnum-cluster-api/commit/062e7f3390ccf3fecc26c045f6eaed2adb9619a4))
+* Use public auth_url for CloudConfigSecret ([4f9c852](https://github.com/runlevel-six/magnum-cluster-api/commit/4f9c852597b2631ec1cf6cea6e5afbe86b68fb21))
+
+
+### Miscellaneous Chores
+
+* release 0.2.0 ([9c8fe82](https://github.com/runlevel-six/magnum-cluster-api/commit/9c8fe8252e61b43019a0c45d31284467ec99af15))
+
+
+### Documentation
+
+* add devstack docs ([3dc6c69](https://github.com/runlevel-six/magnum-cluster-api/commit/3dc6c6997ab29147d9185fd860c4345017a51719))
+* added devstack info ([e8059d9](https://github.com/runlevel-six/magnum-cluster-api/commit/e8059d9d6651dbdb9dbbccfa2ac961e957212144))
+* added info where to install crane ([084d191](https://github.com/runlevel-six/magnum-cluster-api/commit/084d191253a6050b202f1c080fa68b06c51ff100))
+* fix typos ([27b94c3](https://github.com/runlevel-six/magnum-cluster-api/commit/27b94c3b80e822cb605513fb85d7d7df21f33817))
+* remove broken 1.26.2 images ([42f8a5f](https://github.com/runlevel-six/magnum-cluster-api/commit/42f8a5f9a5221b8b7609c9524c1a079ac919d6b8))
+* update adding images ([d90ba3c](https://github.com/runlevel-six/magnum-cluster-api/commit/d90ba3c53571dfa382e3d044c2dd5ce2c1d759ed))
+
 ## [0.4.0](https://github.com/vexxhost/magnum-cluster-api/compare/v0.3.4...v0.4.0) (2023-04-04)
 
 
